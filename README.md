@@ -45,12 +45,23 @@ This project is configured for deployment on Railway with:
 - Dockerfile for containerized deployment
 - `railway.json` configuration file
 - Environment variable support
+- React 19 dependency conflict resolution
+
+### Quick Deploy
+
+For complete deployment workflow including local development to production, see:
+**[📋 DEPLOYMENT-WORKFLOW.md](./DEPLOYMENT-WORKFLOW.md)** - Complete step-by-step deployment guide
+
+### Railway URLs
+- **Production**: https://component-forge-railway-production.up.railway.app
+- **Custom Domain**: http://4-gareth.co.uk (when DNS configured)
 
 ### Railway Deployment
 
 1. Connect your GitHub repository to Railway
 2. Railway will automatically detect the `railway.json` configuration
-3. The app will be built and deployed using the specified build and start commands
+3. Push to the `railway` remote to trigger automatic deployment
+4. The app will be built and deployed using Docker with React 19 compatibility
 
 ## 🔧 Configuration
 
