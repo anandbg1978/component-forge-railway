@@ -82,5 +82,11 @@
   },
   "devDependencies": {
     "prettier": "3.5.3"
+  },
+  "overrides": {
+    "cmdk": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }

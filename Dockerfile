@@ -5,15 +5,14 @@ WORKDIR /app
 # Copy package files first for better Docker layer caching
 COPY package.json yarn.lock ./
 
-# Install yarn and dependencies
-RUN npm install -g yarn
-RUN yarn install --frozen-lockfile
+# Install dependencies with legacy peer deps to handle React 19 compatibility
+RUN npm install --legacy-peer-deps
 
 # Copy source code
 COPY . .
 
 # Build the application
-RUN yarn build
+RUN npm run build
 
 # Production stage
 FROM node:18-alpine AS production
