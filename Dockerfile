@@ -3,16 +3,17 @@ FROM node:18-alpine AS frontend-builder
 WORKDIR /app
 
 # Copy package files first for better Docker layer caching
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
-# Install ALL dependencies (including devDependencies for building)
-RUN npm ci --legacy-peer-deps
+# Install yarn and dependencies
+RUN npm install -g yarn
+RUN yarn install --frozen-lockfile
 
 # Copy source code
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN yarn build
 
 # Production stage
 FROM node:18-alpine AS production
@@ -24,8 +25,8 @@ RUN npm install -g serve
 # Copy built application from builder stage
 COPY --from=frontend-builder /app/dist ./dist
 
-# Expose port
+# Expose port (Railway uses PORT environment variable)
 EXPOSE 3000
 
-# Start the application
-CMD ["serve", "-s", "dist", "-l", "3000"] 
+# Start the application with PORT environment variable support
+CMD ["sh", "-c", "serve -s dist -l ${PORT:-3000}"] 

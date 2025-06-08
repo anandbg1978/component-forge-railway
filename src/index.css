@@ -141,3 +141,69 @@ body {
     padding: 0;
   }
 }
+
+/* Custom scrollbar utilities to replace problematic Tailwind arbitrary value selectors */
+@layer utilities {
+  .custom-scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .custom-scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgb(156 163 175);
+    border-radius: 3px;
+  }
+  
+  .dark .custom-scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #2a2d31;
+  }
+  
+  .custom-scrollbar-mini {
+    scrollbar-width: thin;
+  }
+  
+  .custom-scrollbar-mini::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .custom-scrollbar-mini::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar-mini::-webkit-scrollbar-thumb {
+    background-color: rgb(156 163 175);
+    border-radius: 2px;
+  }
+  
+  .dark .custom-scrollbar-mini::-webkit-scrollbar-thumb {
+    background-color: #2a2d31;
+  }
+  
+  .custom-scrollbar-compose {
+    scrollbar-width: thin;
+  }
+  
+  .custom-scrollbar-compose::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  .custom-scrollbar-compose::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar-compose::-webkit-scrollbar-thumb {
+    background-color: rgb(209 213 219);
+    border-radius: 9999px;
+  }
+  
+  .dark .custom-scrollbar-compose::-webkit-scrollbar-thumb {
+    background-color: #2a2d31;
+  }
+}
