@@ -285,7 +285,7 @@ const RowboatIntegrationBanner = () => {
           </div>
           <Button variant="outline" asChild>
             <a href="/rowboat">
-              View Demo
+              Launch Rowboat
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>

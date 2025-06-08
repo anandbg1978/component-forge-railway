@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -65,6 +66,7 @@ const AgentPreviewCard = ({
     </motion.div>;
 };
 export default function HeroSection() {
+  const navigate = useNavigate();
   const [[page, direction], setPage] = useState([0, 0]);
   const demoSteps: DemoStep[] = [{
     title: "1. Select a Role",
@@ -177,7 +179,11 @@ export default function HeroSection() {
                 Automate workflows, streamline operations, and empower your team with intelligent agents tailored to your exact needs. No code required.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button size="lg" className="text-base px-8 py-6 rounded-full shadow-lg shadow-primary/20">
+                <Button 
+                  size="lg" 
+                  className="text-base px-8 py-6 rounded-full shadow-lg shadow-primary/20"
+                  onClick={() => navigate('/rowboat')}
+                >
                   Start Building Your Agent
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
