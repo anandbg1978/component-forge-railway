@@ -1,13 +1,12 @@
 # Build stage for frontend
-FROM node:18-alpine as frontend-builder
+FROM node:18-alpine AS frontend-builder
 WORKDIR /app
 
-# Copy package files
+# Copy package files first for better Docker layer caching
 COPY package*.json ./
-COPY yarn.lock ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install ALL dependencies (including devDependencies for building)
+RUN npm ci --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -16,7 +15,7 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM node:18-alpine as production
+FROM node:18-alpine AS production
 WORKDIR /app
 
 # Install serve to serve the built application
