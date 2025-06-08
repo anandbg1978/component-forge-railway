@@ -57,14 +57,14 @@ function AnimatedCounter({
     });
     return unsubscribe;
   }, [spring]);
-  return <div className="flex flex-col items-center text-center md:items-start md:text-left" data-magicpath-id="0" data-magicpath-path="ProblemStatementSection.tsx">
-      <div className="flex items-center gap-3" data-magicpath-id="1" data-magicpath-path="ProblemStatementSection.tsx">
-        <Icon className="w-8 h-8 text-primary" data-magicpath-id="2" data-magicpath-path="ProblemStatementSection.tsx" />
-        <dd className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground" data-magicpath-id="3" data-magicpath-path="ProblemStatementSection.tsx">
-          <span ref={ref} data-magicpath-id="4" data-magicpath-path="ProblemStatementSection.tsx">0+</span>
+  return <div className="flex flex-col items-center text-center md:items-start md:text-left">
+      <div className="flex items-center gap-3">
+        <Icon className="w-8 h-8 text-primary" />
+        <dd className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground">
+          <span ref={ref}>0+</span>
         </dd>
       </div>
-      <dt className="mt-2 text-base text-muted-foreground" data-magicpath-id="5" data-magicpath-path="ProblemStatementSection.tsx">{text}</dt>
+      <dt className="mt-2 text-base text-muted-foreground">{text}</dt>
     </div>;
 }
 export default function ProblemStatementSection() {
@@ -92,8 +92,8 @@ export default function ProblemStatementSection() {
       }
     }
   };
-  return <section className="w-full py-20 md:py-28 lg:py-32 bg-secondary/30" data-magicpath-id="6" data-magicpath-path="ProblemStatementSection.tsx">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8" data-magicpath-id="7" data-magicpath-path="ProblemStatementSection.tsx">
+  return <section className="w-full py-20 md:py-28 lg:py-32 bg-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center max-w-3xl mx-auto" initial={{
         opacity: 0,
         y: 20
@@ -105,11 +105,11 @@ export default function ProblemStatementSection() {
         margin: "-100px"
       }} transition={{
         duration: 0.5
-      }} data-magicpath-id="8" data-magicpath-path="ProblemStatementSection.tsx">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-foreground" data-magicpath-id="9" data-magicpath-path="ProblemStatementSection.tsx">
+      }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-foreground">
             Your Team Is Drowning in Repetitive Tasks
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground" data-magicpath-id="10" data-magicpath-path="ProblemStatementSection.tsx">
+          <p className="mt-4 text-lg text-muted-foreground">
             Free up your most valuable assets—your people—to focus on innovation and growth, not administrative overhead.
           </p>
         </motion.div>
@@ -117,34 +117,34 @@ export default function ProblemStatementSection() {
         <motion.ul className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{
         once: true,
         margin: "-150px"
-      }} data-magicpath-id="11" data-magicpath-path="ProblemStatementSection.tsx">
-          {painPoints.map(point => <motion.li key={point.title} variants={itemVariants} data-magicpath-id="12" data-magicpath-path="ProblemStatementSection.tsx">
-              <Card className="h-full text-center p-2 bg-background/60 border-border/30 shadow-md hover:shadow-xl transition-shadow duration-300" data-magicpath-id="13" data-magicpath-path="ProblemStatementSection.tsx">
-                <CardHeader className="items-center" data-magicpath-id="14" data-magicpath-path="ProblemStatementSection.tsx">
-                  <div className="p-4 bg-primary/10 rounded-full" data-magicpath-id="15" data-magicpath-path="ProblemStatementSection.tsx">
-                    <point.icon className="w-8 h-8 text-primary" data-magicpath-id="16" data-magicpath-path="ProblemStatementSection.tsx" />
+      }}>
+          {painPoints.map(point => <motion.li key={point.title} variants={itemVariants}>
+              <Card className="h-full text-center p-2 bg-background/60 border-border/30 shadow-md hover:shadow-xl transition-shadow duration-300">
+                <CardHeader className="items-center">
+                  <div className="p-4 bg-primary/10 rounded-full">
+                    <point.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle className="mt-4 text-xl font-semibold text-foreground" data-magicpath-id="17" data-magicpath-path="ProblemStatementSection.tsx">{point.title}</CardTitle>
+                  <CardTitle className="mt-4 text-xl font-semibold text-foreground">{point.title}</CardTitle>
                 </CardHeader>
-                <CardContent data-magicpath-id="18" data-magicpath-path="ProblemStatementSection.tsx">
-                  <p className="text-muted-foreground" data-magicpath-id="19" data-magicpath-path="ProblemStatementSection.tsx">{point.description}</p>
+                <CardContent>
+                  <p className="text-muted-foreground">{point.description}</p>
                 </CardContent>
               </Card>
             </motion.li>)}
         </motion.ul>
 
-        <aside className="mt-20 md:mt-28" data-magicpath-id="20" data-magicpath-path="ProblemStatementSection.tsx">
-          <div className="relative" data-magicpath-id="21" data-magicpath-path="ProblemStatementSection.tsx">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true" data-magicpath-id="22" data-magicpath-path="ProblemStatementSection.tsx">
-              <div className="w-full border-t border-border/50" data-magicpath-id="23" data-magicpath-path="ProblemStatementSection.tsx" />
+        <aside className="mt-20 md:mt-28">
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-border/50" />
             </div>
-            <div className="relative flex justify-center" data-magicpath-id="24" data-magicpath-path="ProblemStatementSection.tsx">
-              <span className="bg-secondary/30 px-4 text-sm font-medium text-muted-foreground" data-magicpath-id="25" data-magicpath-path="ProblemStatementSection.tsx">The Real Cost</span>
+            <div className="relative flex justify-center">
+              <span className="bg-secondary/30 px-4 text-sm font-medium text-muted-foreground">The Real Cost</span>
             </div>
           </div>
-          <dl className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 text-center" data-magicpath-id="26" data-magicpath-path="ProblemStatementSection.tsx">
-            <AnimatedCounter value={1200} text="Hours lost per year, per team" icon={Clock} data-magicpath-id="27" data-magicpath-path="ProblemStatementSection.tsx" />
-            <AnimatedCounter value={85000} text="Wasted annually on manual tasks" icon={DollarSign} data-magicpath-id="28" data-magicpath-path="ProblemStatementSection.tsx" />
+          <dl className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 text-center">
+            <AnimatedCounter value={1200} text="Hours lost per year, per team" icon={Clock} />
+            <AnimatedCounter value={85000} text="Wasted annually on manual tasks" icon={DollarSign} />
           </dl>
         </aside>
       </div>

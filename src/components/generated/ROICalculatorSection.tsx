@@ -33,7 +33,7 @@ const AnimatedNumber = ({
     };
     return () => controls.stop();
   }, [value]);
-  return <span className="font-bold text-primary" data-magicpath-id="0" data-magicpath-path="ROICalculatorSection.tsx">
+  return <span className="font-bold text-primary">
       {prefix}{Math.round(displayValue).toLocaleString()}{suffix}
     </span>;
 };
@@ -82,8 +82,8 @@ export default function ROICalculatorSection() {
       y: 0
     }
   };
-  return <section className="w-full py-20 md:py-28 lg:py-32 bg-secondary/30" data-magicpath-id="1" data-magicpath-path="ROICalculatorSection.tsx">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8" data-magicpath-id="2" data-magicpath-path="ROICalculatorSection.tsx">
+  return <section className="w-full py-20 md:py-28 lg:py-32 bg-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center max-w-3xl mx-auto" initial={{
         opacity: 0,
         y: 20
@@ -95,79 +95,79 @@ export default function ROICalculatorSection() {
         margin: "-100px"
       }} transition={{
         duration: 0.5
-      }} data-magicpath-id="3" data-magicpath-path="ROICalculatorSection.tsx">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-foreground" data-magicpath-id="4" data-magicpath-path="ROICalculatorSection.tsx">
+      }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-foreground">
             Calculate Your Potential ROI
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground" data-magicpath-id="5" data-magicpath-path="ROICalculatorSection.tsx">
+          <p className="mt-4 text-lg text-muted-foreground">
             See how much time and money you can save by automating repetitive tasks with AI agents. Adjust the sliders to match your team's profile.
           </p>
         </motion.div>
 
-        <div className="mt-16 max-w-4xl mx-auto" data-magicpath-id="6" data-magicpath-path="ROICalculatorSection.tsx">
-          <Card className="bg-background/60 border-border/30 shadow-xl overflow-hidden" data-magicpath-id="7" data-magicpath-path="ROICalculatorSection.tsx">
-            <div className="grid md:grid-cols-2" data-magicpath-id="8" data-magicpath-path="ROICalculatorSection.tsx">
-              <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-border/30" data-magicpath-id="9" data-magicpath-path="ROICalculatorSection.tsx">
-                <form onSubmit={handleSubmit} data-magicpath-id="10" data-magicpath-path="ROICalculatorSection.tsx">
-                  <CardHeader className="p-0 mb-6" data-magicpath-id="11" data-magicpath-path="ROICalculatorSection.tsx">
-                    <CardTitle data-magicpath-id="12" data-magicpath-path="ROICalculatorSection.tsx">Estimate Your Savings</CardTitle>
-                    <CardDescription data-magicpath-id="13" data-magicpath-path="ROICalculatorSection.tsx">Adjust the sliders to calculate.</CardDescription>
+        <div className="mt-16 max-w-4xl mx-auto">
+          <Card className="bg-background/60 border-border/30 shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-border/30">
+                <form onSubmit={handleSubmit}>
+                  <CardHeader className="p-0 mb-6">
+                    <CardTitle>Estimate Your Savings</CardTitle>
+                    <CardDescription>Adjust the sliders to calculate.</CardDescription>
                   </CardHeader>
-                  <CardContent className="p-0 space-y-8" data-magicpath-id="14" data-magicpath-path="ROICalculatorSection.tsx">
-                    <div className="space-y-3" data-magicpath-id="15" data-magicpath-path="ROICalculatorSection.tsx">
-                      <div className="flex justify-between items-center" data-magicpath-id="16" data-magicpath-path="ROICalculatorSection.tsx">
-                        <Label htmlFor="teamSize" data-magicpath-id="17" data-magicpath-path="ROICalculatorSection.tsx">Team Size</Label>
-                        <span className="font-semibold text-foreground" data-magicpath-id="18" data-magicpath-path="ROICalculatorSection.tsx">{teamSize} employees</span>
+                  <CardContent className="p-0 space-y-8">
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <Label htmlFor="teamSize">Team Size</Label>
+                        <span className="font-semibold text-foreground">{teamSize} employees</span>
                       </div>
-                      <Slider id="teamSize" min={1} max={100} step={1} value={[teamSize]} onValueChange={value => setTeamSize(value[0])} aria-label="Team Size" data-magicpath-id="19" data-magicpath-path="ROICalculatorSection.tsx" />
+                      <Slider id="teamSize" min={1} max={100} step={1} value={[teamSize]} onValueChange={value => setTeamSize(value[0])} aria-label="Team Size" />
                     </div>
-                    <div className="space-y-3" data-magicpath-id="20" data-magicpath-path="ROICalculatorSection.tsx">
-                      <div className="flex justify-between items-center" data-magicpath-id="21" data-magicpath-path="ROICalculatorSection.tsx">
-                        <Label htmlFor="hourlyRate" data-magicpath-id="22" data-magicpath-path="ROICalculatorSection.tsx">Avg. Hourly Rate</Label>
-                        <span className="font-semibold text-foreground" data-magicpath-id="23" data-magicpath-path="ROICalculatorSection.tsx">${hourlyRate}</span>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <Label htmlFor="hourlyRate">Avg. Hourly Rate</Label>
+                        <span className="font-semibold text-foreground">${hourlyRate}</span>
                       </div>
-                      <Slider id="hourlyRate" min={20} max={200} step={5} value={[hourlyRate]} onValueChange={value => setHourlyRate(value[0])} aria-label="Average Hourly Rate" data-magicpath-id="24" data-magicpath-path="ROICalculatorSection.tsx" />
+                      <Slider id="hourlyRate" min={20} max={200} step={5} value={[hourlyRate]} onValueChange={value => setHourlyRate(value[0])} aria-label="Average Hourly Rate" />
                     </div>
-                    <div className="space-y-3" data-magicpath-id="25" data-magicpath-path="ROICalculatorSection.tsx">
-                      <div className="flex justify-between items-center" data-magicpath-id="26" data-magicpath-path="ROICalculatorSection.tsx">
-                        <Label htmlFor="tasksAutomated" data-magicpath-id="27" data-magicpath-path="ROICalculatorSection.tsx">Tasks Automated / Week</Label>
-                        <span className="font-semibold text-foreground" data-magicpath-id="28" data-magicpath-path="ROICalculatorSection.tsx">{tasksAutomated} tasks</span>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <Label htmlFor="tasksAutomated">Tasks Automated / Week</Label>
+                        <span className="font-semibold text-foreground">{tasksAutomated} tasks</span>
                       </div>
-                      <Slider id="tasksAutomated" min={1} max={20} step={1} value={[tasksAutomated]} onValueChange={value => setTasksAutomated(value[0])} aria-label="Tasks Automated per Week" data-magicpath-id="29" data-magicpath-path="ROICalculatorSection.tsx" />
+                      <Slider id="tasksAutomated" min={1} max={20} step={1} value={[tasksAutomated]} onValueChange={value => setTasksAutomated(value[0])} aria-label="Tasks Automated per Week" />
                     </div>
                   </CardContent>
-                  <CardFooter className="p-0 mt-8" data-magicpath-id="30" data-magicpath-path="ROICalculatorSection.tsx">
-                    <Button type="submit" size="lg" className="w-full" data-magicpath-id="31" data-magicpath-path="ROICalculatorSection.tsx">
-                      <TrendingUp className="mr-2 h-5 w-5" data-magicpath-id="32" data-magicpath-path="ROICalculatorSection.tsx" />
+                  <CardFooter className="p-0 mt-8">
+                    <Button type="submit" size="lg" className="w-full">
+                      <TrendingUp className="mr-2 h-5 w-5" />
                       See Your Savings
                     </Button>
                   </CardFooter>
                 </form>
               </div>
 
-              <div className="p-6 md:p-8 flex flex-col justify-center items-center text-center" data-magicpath-id="33" data-magicpath-path="ROICalculatorSection.tsx">
-                <AnimatePresence data-magicpath-id="34" data-magicpath-path="ROICalculatorSection.tsx">
+              <div className="p-6 md:p-8 flex flex-col justify-center items-center text-center">
+                <AnimatePresence>
                   {isCalculated ? <motion.div key="results" variants={containerVariants} initial="hidden" animate="visible" exit={{
                   opacity: 0
-                }} className="w-full" data-magicpath-id="35" data-magicpath-path="ROICalculatorSection.tsx">
-                      <motion.h3 variants={itemVariants} className="text-2xl font-semibold text-foreground" data-magicpath-id="36" data-magicpath-path="ROICalculatorSection.tsx">Annual Savings</motion.h3>
-                      <div className="mt-6 space-y-6" data-magicpath-id="37" data-magicpath-path="ROICalculatorSection.tsx">
-                        <motion.div variants={itemVariants} className="flex items-center justify-center gap-4" data-magicpath-id="38" data-magicpath-path="ROICalculatorSection.tsx">
-                          <Clock className="w-8 h-8 text-primary" data-magicpath-id="39" data-magicpath-path="ROICalculatorSection.tsx" />
-                          <p className="text-xl text-muted-foreground" data-magicpath-id="40" data-magicpath-path="ROICalculatorSection.tsx">
-                            <AnimatedNumber value={savings.time} suffix=" hours" data-magicpath-id="41" data-magicpath-path="ROICalculatorSection.tsx" /> saved
+                }} className="w-full">
+                      <motion.h3 variants={itemVariants} className="text-2xl font-semibold text-foreground">Annual Savings</motion.h3>
+                      <div className="mt-6 space-y-6">
+                        <motion.div variants={itemVariants} className="flex items-center justify-center gap-4">
+                          <Clock className="w-8 h-8 text-primary" />
+                          <p className="text-xl text-muted-foreground">
+                            <AnimatedNumber value={savings.time} suffix=" hours" /> saved
                           </p>
                         </motion.div>
-                        <motion.div variants={itemVariants} className="flex items-center justify-center gap-4" data-magicpath-id="42" data-magicpath-path="ROICalculatorSection.tsx">
-                          <DollarSign className="w-8 h-8 text-primary" data-magicpath-id="43" data-magicpath-path="ROICalculatorSection.tsx" />
-                          <p className="text-xl text-muted-foreground" data-magicpath-id="44" data-magicpath-path="ROICalculatorSection.tsx">
-                            <AnimatedNumber value={savings.cost} prefix="$" data-magicpath-id="45" data-magicpath-path="ROICalculatorSection.tsx" /> saved
+                        <motion.div variants={itemVariants} className="flex items-center justify-center gap-4">
+                          <DollarSign className="w-8 h-8 text-primary" />
+                          <p className="text-xl text-muted-foreground">
+                            <AnimatedNumber value={savings.cost} prefix="$" /> saved
                           </p>
                         </motion.div>
                       </div>
-                      <motion.div variants={itemVariants} className="mt-8 w-full" data-magicpath-id="46" data-magicpath-path="ROICalculatorSection.tsx">
-                        <p className="text-sm text-muted-foreground mb-2" data-magicpath-id="47" data-magicpath-path="ROICalculatorSection.tsx">Productivity Gain</p>
-                        <div className="w-full bg-muted rounded-full h-4" data-magicpath-id="48" data-magicpath-path="ROICalculatorSection.tsx">
+                      <motion.div variants={itemVariants} className="mt-8 w-full">
+                        <p className="text-sm text-muted-foreground mb-2">Productivity Gain</p>
+                        <div className="w-full bg-muted rounded-full h-4">
                           <motion.div className="bg-primary h-4 rounded-full" initial={{
                         width: 0
                       }} animate={{
@@ -176,7 +176,7 @@ export default function ROICalculatorSection() {
                       transition={{
                         duration: 1,
                         ease: "easeOut"
-                      }} data-magicpath-id="49" data-magicpath-path="ROICalculatorSection.tsx" />
+                      }} />
                         </div>
                       </motion.div>
                     </motion.div> : <motion.div key="placeholder" initial={{
@@ -185,9 +185,9 @@ export default function ROICalculatorSection() {
                   opacity: 1
                 }} transition={{
                   delay: 0.2
-                }} className="text-center" data-magicpath-id="50" data-magicpath-path="ROICalculatorSection.tsx">
-                      <TrendingUp className="w-12 h-12 text-muted-foreground/50 mx-auto" data-magicpath-id="51" data-magicpath-path="ROICalculatorSection.tsx" />
-                      <p className="mt-4 text-muted-foreground" data-magicpath-id="52" data-magicpath-path="ROICalculatorSection.tsx">Your potential savings will be displayed here.</p>
+                }} className="text-center">
+                      <TrendingUp className="w-12 h-12 text-muted-foreground/50 mx-auto" />
+                      <p className="mt-4 text-muted-foreground">Your potential savings will be displayed here.</p>
                     </motion.div>}
                 </AnimatePresence>
               </div>
