@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "railway": {
+      "command": "npx",
+      "args": ["-y", "@jasontanswe/railway-mcp", "6651b7b6-9427-4429-ad3f-7681e82629d8"],
+      "env": {}
+    }
+  }
+} 
